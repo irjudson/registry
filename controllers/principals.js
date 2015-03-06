@@ -62,7 +62,6 @@ exports.create = function(req, res) {
 
     // translate api_key (if any) from a hash value to an actual row.
     core.services.apiKeys.findByKey(req.body.api_key, function(err, apiKey) {
-        console.log('apikey error: ' + err);
         if (err) return core.utils.handleError(res, err);
 
         req.body.api_key = apiKey;
@@ -70,11 +69,9 @@ exports.create = function(req, res) {
         var principal = new core.models.Principal(req.body);
 
         core.services.principals.create(principal, function(err, principal) {
-            console.log('principals.create error: ' + err);
             if (err) return core.utils.handleError(res, err);
 
             core.services.accessTokens.create(principal, function(err, accessToken) {
-                console.log('accessTokens.create error: ' + err);
                 if (err) return core.utils.handleError(res, err);
 
                 var principalJSON = principal.toJSON();
