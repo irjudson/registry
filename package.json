@@ -34,8 +34,7 @@
     "passport-publickey": "~1.0.3",
     "request": "~2.36.0",
     "winston": "~0.7.3",
-    "winston-loggly": "~1.0.2",
-    "mocha": "~1.20.1"
+    "winston-loggly": "~1.0.2"
   },
   "devDependencies": {
     "mocha": "~1.20.1"

@@ -5,7 +5,7 @@ The registry service provides identity and discovery services for security princ
 ## Installation
 
 1. `git clone https://github.com/nitrogenjs/registry`
-2. `cd frontdoor`
+2. `cd registry`
 3. `npm install`
 4. `node server.js`
 
