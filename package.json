@@ -24,6 +24,7 @@
     "jsonwebtoken": "~1.1.2",
     "moment": "~2.7.0",
     "mongoose": "~3.8.22",
+    "nitrogen": "~0.2",
     "nitrogen-core": "~0.3",
     "nitrogen-local-providers": "~0.3",
     "nitrogen-redis-providers": "~0.3",

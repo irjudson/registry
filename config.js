@@ -24,26 +24,29 @@ if (process.env.NODE_ENV === "production") {
 
 } else if (process.env.NODE_ENV === "test") {
     config = {
-        external_port: process.env.PORT || 3051,
-        internal_port: 3051,
-        protocol: process.env.PROTOCOL || "http",
+        external_port: process.env.PORT || 3050,
+        internal_port: 3050,
+        messaging_endpoint: "http://localhost:3051",
         mongodb_connection_string: "mongodb://localhost/nitrogen_test",
+        protocol: process.env.PROTOCOL || "http",
         web_admin_uri: "http://localhost:9000"
     };
 } else {
     config = {
-        external_port: process.env.PORT || 3031,
+        external_port: process.env.PORT || 3030,
         protocol: process.env.PROTOCOL || "http",
         mongodb_connection_string: "mongodb://localhost/nitrogen_dev",
         web_admin_uri: "http://localhost:9000"
     };
 }
 
-config.internal_port = config.internal_port || 3031;
-
+config.internal_port = config.internal_port || 3030;
 config.external_port = config.external_port || 443;
+
 config.protocol = process.env.PROTOCOL || config.protocol || "https";
 config.host = process.env.HOST_NAME || config.host || "localhost";
+
+config.messaging_endpoint = process.env.MESSAGING_ENDPOINT || config.messaging_endpoint || "http://localhost:3031";
 config.mongodb_connection_string = config.mongodb_connection_string || process.env.MONGODB_CONNECTION_STRING;
 
 // Endpoint URI configuration
@@ -64,13 +67,13 @@ config.headwaiter_path = config.v1_api_path + "/headwaiter";
 config.headwaiter_uri = config.base_endpoint + config.headwaiter_path;
 
 config.messages_path = config.v1_api_path + "/messages";
-config.messages_endpoint = config.base_endpoint + config.messages_path;
+config.messages_endpoint = config.messaging_endpoint + config.messages_path;
 
 config.ops_path = config.v1_api_path + "/ops";
 config.ops_endpoint = config.base_endpoint + config.ops_path;
 
 config.permissions_path = config.v1_api_path + "/permissions";
-config.permissions_endpoint = config.base_endpoint + config.permissions_path;
+config.permissions_endpoint = config.messaging_endpoint + config.permissions_path;
 
 config.principals_path = config.v1_api_path + "/principals";
 config.principals_endpoint = config.base_endpoint + config.principals_path;
