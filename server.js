@@ -146,6 +146,16 @@ core.services.initialize(function(err) {
     app.get(core.config.users_path + '/authorize', ensureLoggedIn,                     controllers.users.authorize);
     app.post(core.config.users_path + '/decision', ensureLoggedIn,                     controllers.users.decision);
 
+    app.get('/client/nitrogen.js', function(req, res) {
+        res.contentType('application/javascript');
+        res.send(core.services.messages.clients['nitrogen.js']);
+    });
+
+    app.get('/client/nitrogen-min.js', function(req, res) {
+        res.contentType('application/javascript');
+        res.send(core.services.messages.clients['nitrogen-min.js']);
+    });
+
     // static files (static/ is mapped to the root API url for any path not already covered above)
     app.use(express.static(path.join(__dirname, '/static')));
 
