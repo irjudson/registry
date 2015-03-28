@@ -61,7 +61,7 @@ config.api_keys_path = config.v1_api_path + "/api_keys";
 config.api_keys_endpoint = config.base_endpoint + config.api_keys_path;
 
 config.blobs_path = config.v1_api_path + "/blobs";
-config.blobs_endpoint = config.base_endpoint + config.blobs_path;
+config.blobs_endpoint = config.messaging_endpoint + config.blobs_path;
 
 config.headwaiter_path = config.v1_api_path + "/headwaiter";
 config.headwaiter_uri = config.base_endpoint + config.headwaiter_path;
@@ -79,7 +79,7 @@ config.principals_path = config.v1_api_path + "/principals";
 config.principals_endpoint = config.base_endpoint + config.principals_path;
 
 config.subscriptions_path = '/';
-config.subscriptions_endpoint = config.base_endpoint + config.subscriptions_path;
+config.subscriptions_endpoint = config.messaging_endpoint + config.subscriptions_path;
 
 config.users_path = "/user";
 config.users_endpoint = config.base_endpoint + config.users_path;
