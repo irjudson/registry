@@ -12,7 +12,6 @@ var express = require('express')
   , hbs = exphbs.create({ defaultLayout: 'main' })
   , LocalStrategy = require('passport-local').Strategy
   , middleware = require('./middleware')
-  , mongoose = require('mongoose')
   , passport = require('passport')
   , path = require('path')
   , PublicKeyStrategy = require('passport-publickey').Strategy;
