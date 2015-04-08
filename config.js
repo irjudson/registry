@@ -121,7 +121,7 @@ config.auth_code_lifetime_seconds = 60 * 60; // seconds (default: 1 hour)
 config.device_secret_bytes = 128;
 
 config.access_token_bytes = 32;
-config.access_token_lifetime = 1; // days
+config.access_token_lifetime = 7; // days
 config.access_token_signing_key = process.env.ACCESS_TOKEN_SIGNING_KEY || '12345678901234567890123456789012';
 
 // when the token gets within 10% (default) of config.access_token_lifetime,

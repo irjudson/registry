@@ -2,7 +2,7 @@ var core = require('nitrogen-core')
   , passport = require('passport');
 
 var tokenNearExpirationCheck = function(req, res, callback) {
-    var secondsToExpiration = req.user.jwtToken - (Date.now() / 1000);
+    var secondsToExpiration = req.user.jwtToken.exp - (Date.now() / 1000);
 
     if (secondsToExpiration > core.config.refresh_token_threshold * core.config.access_token_lifetime * 24 * 60 * 60)
         return callback();
