@@ -25,7 +25,7 @@
     "moment": "~2.7.0",
     "nitrogen": "~0.2",
     "nitrogen-core": "^0.3.23",
-    "nitrogen-local-providers": "~0.3.13",
+    "nitrogen-local-providers": "~0.3.14",
     "nitrogen-redis-providers": "~0.3",
     "newrelic": "~1.7.5",
     "passport": "~0.2.1",
