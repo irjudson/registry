@@ -19,13 +19,10 @@ The registry service provides identity and discovery services for security princ
 The Nitrogen project is housed in a set of GitHub projects:
 
 1. [registry](https://github.com/nitrogenjs/registry): Device identity and discovery services.
-2. [ingestion](https://github.com/nitrogenjs/ingestion): Message ingestion services.
-3. [consumption](https://github.com/nitrogenjs/consumption): Message query and realtime consumption services.
-4. [client](https://github.com/nitrogenjs/client): JavaScript client library for building Nitrogen devices and applications.
-5. [admin](https://github.com/nitrogenjs/admin): Web admin tool for working with the Nitrogen service.
-6. [device](https://github.com/nitrogenjs/devices): Device principals for common pieces of hardware.
-7. [commands](https://github.com/nitrogenjs/commands): CommandManagers and schemas for well known command types.
-8. [cli](https://github.com/nitrogenjs/cli): Command line interface for working with the Nitrogen service.
-9. [reactor](https://github.com/nitrogenjs/reactor): Always-on hosted application execution platform.
-10. [apps](https://github.com/nitrogenjs/apps): Project maintained Nitrogen applications.
-11. [frontdoor](https://github.com/nitrogenjs/frontdoor): Frontdoor proxy for API consolidation between backends.
+2. [messaging](https://github.com/nitrogenjs/messaging): Messaging services.
+3. [client](https://github.com/nitrogenjs/client): JavaScript client library for building Nitrogen devices and applications.
+4. [admin](https://github.com/nitrogenjs/admin): Web admin tool for working with the Nitrogen service.
+5. [device](https://github.com/nitrogenjs/devices): Device principals for common pieces of hardware.
+6. [commands](https://github.com/nitrogenjs/commands): CommandManagers and schemas for well known command types.
+7. [cli](https://github.com/nitrogenjs/cli): Command line interface for working with the Nitrogen service.
+8. [apps](https://github.com/nitrogenjs/apps): Project maintained Nitrogen applications.

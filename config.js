@@ -61,7 +61,7 @@ config.api_keys_path = config.v1_api_path + "/api_keys";
 config.api_keys_endpoint = config.base_endpoint + config.api_keys_path;
 
 config.blobs_path = config.v1_api_path + "/blobs";
-config.blobs_endpoint = config.base_endpoint + config.blobs_path;
+config.blobs_endpoint = config.messaging_endpoint + config.blobs_path;
 
 config.headwaiter_path = config.v1_api_path + "/headwaiter";
 config.headwaiter_uri = config.base_endpoint + config.headwaiter_path;
@@ -79,7 +79,7 @@ config.principals_path = config.v1_api_path + "/principals";
 config.principals_endpoint = config.base_endpoint + config.principals_path;
 
 config.subscriptions_path = '/';
-config.subscriptions_endpoint = config.base_endpoint + config.subscriptions_path;
+config.subscriptions_endpoint = config.messaging_endpoint + config.subscriptions_path;
 
 config.users_path = "/user";
 config.users_endpoint = config.base_endpoint + config.users_path;
@@ -121,7 +121,7 @@ config.auth_code_lifetime_seconds = 60 * 60; // seconds (default: 1 hour)
 config.device_secret_bytes = 128;
 
 config.access_token_bytes = 32;
-config.access_token_lifetime = 1; // days
+config.access_token_lifetime = 7; // days
 config.access_token_signing_key = process.env.ACCESS_TOKEN_SIGNING_KEY || '12345678901234567890123456789012';
 
 // when the token gets within 10% (default) of config.access_token_lifetime,
