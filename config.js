@@ -1,6 +1,7 @@
 var log = require('winston')
   , Loggly = require('winston-loggly').Loggly
   , localProviders = require('nitrogen-local-providers')
+  , mongodbProviders = require('@irjudson/nitrogen-mongodb-providers')  
   , redisProviders = require('nitrogen-redis-providers');
 
 var config = null;
@@ -137,7 +138,7 @@ config.redis_servers = {
 };
 
 console.log('archive_provider: using local storage.');
-config.archive_providers = [ new localProviders.NullArchiveProvider(config, log) ];
+config.archive_providers = [ new mongodbProviders.MongoDBArchiveProvider(config, log) ];
 
 console.log('blob_provider: using local storage.');
 config.blob_storage_path = './storage';

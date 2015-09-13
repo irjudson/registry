@@ -26,6 +26,7 @@
     "nitrogen": "~0.2",
     "nitrogen-core": "^0.3.23",
     "nitrogen-local-providers": "~0.3.15",
+    "@irjudson/nitrogen-mongodb-providers": "~0.3",
     "nitrogen-redis-providers": "~0.3",
     "newrelic": "~1.7.5",
     "passport": "~0.2.1",
